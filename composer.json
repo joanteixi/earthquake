@@ -1,0 +1,20 @@
+{
+  "name": "joanteixi/earthquakes-api",
+  "description": "API for earthquakes to PowerBI",
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "psr-0": { "": "src/" }
+  },
+
+  "authors": [
+    {
+      "name": "Joan Teixi",
+      "email": "joan@laiogurtera.com"
+    }
+  ]
+}
