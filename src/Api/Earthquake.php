@@ -22,6 +22,9 @@ class Earthquake
     /** @var  \DateTime */
     protected $time;
 
+    /** @var  string */
+    protected $place;
+
 
     protected function __construct($data)
     {
@@ -30,8 +33,10 @@ class Earthquake
 
     protected function processData($data)
     {
-
+        $dt = new \DateTime();
         $this->setMagnitude($data['properties']['mag']);
+        $this->setPlace($data['properties']['place']);
+        $this->setTime($dt->setTimestamp(($data['properties']['time'])/1000));
         $this->setLat($data['geometry']['coordinates'][0]);
         $this->setLng($data['geometry']['coordinates'][1]);
     }
@@ -107,6 +112,21 @@ class Earthquake
         $this->time = $time;
     }
 
+    /**
+     * @param string $place
+     */
+    public function setPlace(string $place)
+    {
+        $this->place = $place;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlace(): string
+    {
+        return $this->place;
+    }
 
 
 }

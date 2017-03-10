@@ -2,7 +2,8 @@
   "name": "joanteixi/earthquakes-api",
   "description": "API for earthquakes to PowerBI",
   "require": {
-    "guzzlehttp/guzzle": "~6.0"
+    "guzzlehttp/guzzle": "~6.0",
+    "symfony/console": "^3.2"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.0"
